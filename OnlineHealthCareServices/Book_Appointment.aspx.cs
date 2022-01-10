@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
+
+namespace OnlineHealthCareServices
+{
+    public partial class Book_Appointment : System.Web.UI.Page
+    {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["mydbcs"].ConnectionString);
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Disease();
+        }
+        private void Disease()
+        {
+            SqlDataAdapter adap = new SqlDataAdapter("select * from Disease ", con);
+            DataTable dt = new DataTable();
+            adap.Fill(dt);
+            DataList1.DataSource = dt;
+            DataList1.DataBind();
+        }
+    }
+}
