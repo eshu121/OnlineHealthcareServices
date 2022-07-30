@@ -17,7 +17,6 @@ namespace OnlineHealthCareServices
         int UserDetailId = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            bindNews();
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -64,22 +63,7 @@ namespace OnlineHealthCareServices
                 Response.Redirect("userLogin.aspx");
             }
         }
-        private void bindNews()
-        {
-            SqlDataAdapter adap = new SqlDataAdapter("select top 5 newsName,newsLink from News order by newsId desc", con);
-            DataTable dt = new DataTable();
-            adap.Fill(dt);
-
-            //repOrderHistory.DataSource = dt;
-            //repOrderHistory.DataBind();
-            DataList1.DataSource = dt;
-            DataList1.DataBind();
-            DataList2.DataSource = dt;
-            DataList2.DataBind();
-            //GridView1.DataSource = dt;
-            //GridView1.DataBind();
-
-        }
+       
        
     }
 }

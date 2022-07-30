@@ -15,16 +15,9 @@
           });
       </script>
     
-    <marquee onmouseover="this.stop();" onmouseout="this.start();" style="background-color:red;">
-      <asp:DataList ID="DataList1" RepeatDirection="Horizontal" runat="server">
-          <ItemTemplate>
-             
-                  <a href='<%# Eval("newsLink") %>' style="color:white;" ><%# Eval("newsName") %></a> | 
-             
-          </ItemTemplate>
-      </asp:DataList></marquee>
+    
     <div class="row">
-        <div class="col-md-8 cols-sm-12">
+        <div class="col-md-12 cols-sm-12">
             <div class="page-hero bg-image overlay-dark" style="background-image: url(img/bg_image_1.jpg);">
                 <div class="hero-section">
                   <div class="container text-center wow zoomIn">
@@ -36,7 +29,7 @@
      
               </div>
         </div>
-        <div class="col-md-4 cols-sm-12"><div class="div container">
+        <%--<div class="col-md-4 cols-sm-12"><div class="div container">
             <div class="row" style="background-color:darkgray; color:black; border-radius:5px;"><h4>Latest News</h4><hr /></div>
             
              <marquee direction="up" height="80%" onmouseover="this.stop();" onmouseout="this.start();" >
@@ -50,7 +43,7 @@
             
             <a href="Link.aspx" style="float:right; background-color:blue;color:white;border-radius:5px;" >Read More</a>
         </div>
-            </div>
+            </div>--%>
     </div>
  
 

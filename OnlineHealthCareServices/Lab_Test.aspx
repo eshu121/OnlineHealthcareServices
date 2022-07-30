@@ -40,20 +40,16 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/opdtype/blood.jpg" width="100%" height="500px" />
+                            <img src="img/opdtype/blood.jpg" width="100%" height="350px" />
                         </div>
-                        <%-- <div class="carousel-item">
-                        <img src="img/opdtype/heart.jpg" width="100%" height="400px" />
-                    </div>--%>
+                      
                         <div class="carousel-item">
-                            <img src="img/opdtype/lipid.jpg" width="100%" height="500px" />
+                            <img src="img/opdtype/lipid.jpg" width="100%" height="350px" />
                         </div>
                         <div class="carousel-item">
                             <a href="Book_Appointment.aspx">
-                                <img src="img/opdtype/liver.jpg" width="100%" height="500px" /></a>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4>Book Appointment</h4>
-                            </div>
+                                <img src="img/opdtype/liver.jpg" width="100%" height="350px" /></a>
+                           
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -74,22 +70,22 @@
                             <div class="form-row">
                                 <div class="col-md-6 cols-sm-12">
                                     <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="First Name "></asp:TextBox>
-<%--                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtFirstName" runat="server" SetFocusOnError="true" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtFirstName" runat="server" SetFocusOnError="true" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-md-6 cols-sm-12">
                                     <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" placeholder="Last Name "></asp:TextBox>
 
-<%--                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtLastName" runat="server" ErrorMessage="*" SetFocusOnError="true" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtLastName" runat="server" ErrorMessage="*" SetFocusOnError="true" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6 cols-sm-12">
                                     <asp:TextBox ID="txtEmailId" runat="server" CssClass="form-control" placeholder="Email Id " TextMode="Email"></asp:TextBox>
-<%--                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtEmailId" runat="server" SetFocusOnError="true" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtEmailId" runat="server" SetFocusOnError="true" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-md-6 cols-sm-12">
                                     <asp:TextBox ID="txtMobileNo" runat="server" CssClass="form-control" placeholder="Mobile No " TextMode="Number"></asp:TextBox>
-<%--                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" ControlToValidate="txtMobileNo"></asp:RequiredFieldValidator>--%>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" ControlToValidate="txtMobileNo"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -99,7 +95,7 @@
                                 </div>
                                 <div class="col-md-6 cols-sm-12">
                                     <asp:TextBox ID="txtAge" runat="server" CssClass="form-control" placeholder="Age"></asp:TextBox>
-<%--                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" ControlToValidate="txtAge"></asp:RequiredFieldValidator>--%>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" ControlToValidate="txtAge"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
@@ -110,8 +106,8 @@
                                 </div>
                                 <div class="col-md-6 cols-sm-6">
                                     <asp:TextBox ID="txtDate" runat="server" CssClass="form-control" placeholder="Test Date"></asp:TextBox>
-                                    <ajaxToolkit:CalendarExtender ID="CalendarExtender1" Enabled="true" OnClientDateSelectionChanged="checkDate" Format="dd'/'MM'/'yyyy" TargetControlID="txtDate" PopupButtonID="sp" runat="server" />
-
+                                    <ajaxToolkit:CalendarExtender ID="CalendarExtender1" Enabled="true"  Format="dd'/'MM'/'yyyy" TargetControlID="txtDate" PopupButtonID="sp" runat="server" />
+                                   
                                 </div>
                             </div>
                             <div class="form-row">
@@ -216,4 +212,7 @@
             </div>
         </div>
     </div>
+
+
+
 </asp:Content>

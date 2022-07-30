@@ -9,7 +9,7 @@
         </div>
     <div class="row textArea">
             <div class="col-md-4 cols-sm-12">
-               <a href="#"> <img src="img/blog/blog_1.jpg" width="500px" height="250px" /></a>
+               <a href="#"> <img src="img/blog/blog_1.jpg" width="400px" height="250px" /></a>
             </div>
             <div class="col-md-8 cols-sm-12">
                <a href="#"><h3>List of Countries without Coronavirus case</h3></a>
@@ -21,7 +21,7 @@
         </div>
     <div class="row textArea">
             <div class="col-md-4 cols-sm-12">
-               <a href="#"> <img src="img/blog/blog_2.jpg" width="500px" height="250px"/></a>
+               <a href="#"> <img src="img/blog/blog_2.jpg" width="400px" height="250px"/></a>
             </div>
             <div class="col-md-8 cols-sm-12">
                <a href="#"><h3>Recovery Room: News beyond the pandemic</h3></a>
@@ -33,7 +33,7 @@
         </div>
     <div class="row textArea">
             <div class="col-md-4 cols-sm-12">
-               <a href="#"> <img src="img/blog/blog_3.jpg" width="500px" height="250px"/></a>
+               <a href="#"> <img src="img/blog/blog_3.jpg" width="400px" height="250px"/></a>
             </div>
             <div class="col-md-8 cols-sm-12">
                <a href="#"><h3>What is the impact of eating too much sugar?</h3></a>

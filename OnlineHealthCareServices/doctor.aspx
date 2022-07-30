@@ -9,24 +9,7 @@
          <asp:DataList ID="DataList1" RepeatColumns="3" runat="server">
              <ItemTemplate>
                 <div class="container table">
-                    <%--<div class="row">
-                        <div class="col-md-4 col-sm-12">
-                            <img src="../Prescription/<%# Eval("Doctorimg") %>" width="250px" height="200px" />
-                        </div>
-                        <div class="col-md-8  col-sm-12">
-                            <div class="row"><h2>
-                                 <a href="#"><h2><%# Eval("doctorName") %></h2></a>
-                            </div><div class="row"><h2>
-                                   <h5><%# Eval("Degree") %> - <%# Eval("Department") %> </h5><br/>
-                            </div><div class="row"><h2>
-                                   <h5><%# Eval("Exprience") %>Years of Experience <br/></h5>
-                            </div><div class="row"><h2>
-                                    <h5>OPD Timing<br/>
-                                   <%# Eval("OPDSchedule") %></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>--%>
+                  
                   <div class="card-doctor">
             <div class="header">
               <img src="../Prescription/<%# Eval("Doctorimg") %>" width="250px" height="200px" alt="">

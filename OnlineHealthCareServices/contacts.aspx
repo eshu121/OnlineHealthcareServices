@@ -25,7 +25,7 @@ Contact Medmonks for answers to all your Medical Travel related Questions. We as
              </div>
              
              <div class="col-md-6 cols-sm-12">
-                  <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
+                  <a href="#"><span class="mai-mail text-primary"></span> Team.OHC.Services@gmail.com</a>
              </div>
 
          </div>

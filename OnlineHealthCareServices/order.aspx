@@ -86,7 +86,7 @@
            <div class="col-md-6 cols-sm-12">
                 
                <br /><br />
-                <a href="order_Status.aspx">Go to Order's Details</a>
+                <a href="order_History.aspx">Go to Order's Details</a>
            </div>
             <div class="col-md-6 cols-sm-12">
            </div>

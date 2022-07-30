@@ -82,7 +82,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                <%--<a href='../Prescription/<%# Eval("invoice") %>' download>Invoice</a>--%>
-                                    <asp:Button ID="btnExport" runat="server" Text="Export" OnClick="btnExport_Click" />
+                                    <asp:Button ID="btnExport" runat="server" Text="invoice" OnClick="btnExport_Click" />
                                     </div>
                             </div><br />
                             <div class="row">

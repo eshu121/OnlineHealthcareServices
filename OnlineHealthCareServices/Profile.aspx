@@ -80,7 +80,8 @@
                       <h6 class="mb-0">Gender</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                     <asp:TextBox ID="txtGender" runat="server" BorderStyle="None" ForeColor="Blue" ReadOnly="True"></asp:TextBox>
+                        <asp:DropDownList ID="ddlGender" runat="server" BorderStyle="None" ForeColor="Blue" ReadOnly="True"></asp:DropDownList>                    
+
                     </div>
                   </div>
                      <hr>

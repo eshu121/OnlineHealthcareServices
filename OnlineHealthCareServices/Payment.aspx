@@ -66,9 +66,6 @@
                                 <hr>
                                 <div class="form-row">
                                     <div class="col-md-6">
-                                        <asp:Button ID="btnCancel" class="btn btn-default btn-lg btn-block" runat="server" Text="Cancel" OnClick="btnCancel_Click"  />
-                                    </div>
-                                    <div class="col-md-6">
                                          <asp:Button ID="btnSubmit" class="btn btn-success btn-lg btn-block" runat="server" Text="Submit" OnClick="btnSubmit_Click" ValidationGroup="payment"  />
                                     </div>
                                 </div>

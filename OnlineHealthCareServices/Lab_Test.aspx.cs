@@ -16,7 +16,7 @@ namespace OnlineHealthCareServices
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["mydbcs"].ConnectionString);
         DataTable dt;
         int resCode = 0;
-        int UserDetailId = 1;
+        int UserDetailId = 0;
         int testId = 0;
         int totalMarks = 0;
         string ta = string.Empty;
@@ -28,14 +28,14 @@ namespace OnlineHealthCareServices
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["UserDetailId"] != null && Session["UserDetailId"].ToString() != "")
-            //{
-            //    UserDetailId = Convert.ToInt32(Session["UserDetailId"]);
-            //}
-            //else
-            //{
-            //    Response.Redirect("userLogin.aspx");
-            //}
+            if (Session["UserDetailId"] != null && Session["UserDetailId"].ToString() != "")
+            {
+                UserDetailId = Convert.ToInt32(Session["UserDetailId"]);
+            }
+            else
+            {
+                Response.Redirect("userLogin.aspx");
+            }
 
             if (IsPostBack)
                 return;
@@ -45,7 +45,28 @@ namespace OnlineHealthCareServices
             bindTest();
             bindCity();
             bindSample();
+            bindUserDetail(UserDetailId);
 
+        }
+
+        protected void bindUserDetail(int UserDetailId)
+        {
+            SqlDataAdapter adap = new SqlDataAdapter("select * from UserDetail where isActive=1 and UserDetailId=" + UserDetailId + "", con);
+            DataTable dt = new DataTable();
+            adap.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                int StateId = Convert.ToInt16(dt.Rows[0]["StateId"]);
+
+                txtFirstName.Text = dt.Rows[0]["FirstName"].ToString();
+
+                txtLastName.Text = dt.Rows[0]["LastName"].ToString();
+                txtAge.Text = dt.Rows[0]["Age"].ToString();
+                ddlGender.SelectedIndex = Convert.ToInt16(dt.Rows[0]["GenderId"]);
+                txtMobileNo.Text = dt.Rows[0]["MobileNumber"].ToString();
+                txtEmailId.Text = dt.Rows[0]["EmailId"].ToString();
+            }
         }
 
         private void bindGender()
@@ -201,7 +222,7 @@ namespace OnlineHealthCareServices
                     con.Close();
                 }
             }
-
+            Response.Redirect("Payment.aspx?labTestId=" + LabTestId);
             clear();
         }
 

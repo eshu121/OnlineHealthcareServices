@@ -49,7 +49,7 @@
                             <div class="row">
                                 <div class="col-md-12 cols-sm-12">
                                     Payment Status :
-                                    <asp:Label ID="Label8" runat="server" Text='<%# Eval("PaymentStatus").ToString() == "1" ? "Payment Success" : "Payment Panding" %>' Font-Bold="True"></asp:Label> 
+                                    <asp:Label ID="Label8" runat="server" Text='<%# Eval("PaymentStatus").ToString() == "1" ? "Paid" : " " %>' Font-Bold="True"></asp:Label> 
 
                                 </div>
                                

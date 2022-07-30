@@ -23,8 +23,8 @@ namespace OnlineHealthCareServices
             SqlDataAdapter adap = new SqlDataAdapter("select * from DoctorDetails ", con);
             DataTable dt = new DataTable();
             adap.Fill(dt);
-            Repeater1.DataSource = dt;
-            Repeater1.DataBind();
+            DataList1.DataSource = dt;
+            DataList1.DataBind();
         }
     }
 }

@@ -18,10 +18,10 @@ namespace OnlineHealthCareServices
             {
                 lblPassError.Text = "";
             }
-            if (Session["MobileNo"] == null)
-            {
-                Response.Redirect("userLogin.aspx");
-            }
+            //if (Session["MobileNo"] == null)
+            //{
+            //    Response.Redirect("userLogin.aspx");
+            //}
         }
 
         protected void btnForgot_Click(object sender, EventArgs e)
@@ -49,6 +49,14 @@ namespace OnlineHealthCareServices
             {
 
                 cmd = new SqlCommand("update UserDetail set UserPassword='" + txtNewPass.Text + "' where MobileNumber='" + Session["MobileNo"] + "'", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                lblPassError.Text = "Your Password is Forgot Successfully.";
+            }
+            else if (resCode == 2)
+            {
+                cmd = new SqlCommand("update DoctorDetails set Password='" + txtNewPass.Text + "' where MobileNumber='" + Session["MobileNo"] + "'", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

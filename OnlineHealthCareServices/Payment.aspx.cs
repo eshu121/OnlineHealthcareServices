@@ -18,6 +18,7 @@ namespace OnlineHealthCareServices
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Request.QueryString["PresId"] != null)
             {
                 PrescriptionId = Convert.ToInt32(Request.QueryString["PresId"]);
@@ -25,30 +26,27 @@ namespace OnlineHealthCareServices
                 Amount(PrescriptionId);
 
             }
-            else if(Request.QueryString["TestId"] != null)
+            else if(Request.QueryString["labTestId"] != null)
             {
-                testId = Convert.ToInt32(Request.QueryString["TestId"]);
+                testId = Convert.ToInt32(Request.QueryString["labTestId"]);
                 testAmount(testId);
             }
             
 
         }
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("order_History.aspx");
-        }
+       
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (PrescriptionId!=null)
+            if (PrescriptionId != 0)
             {
                 SqlCommand cmd = new SqlCommand("update PrescriptionDetail set paymentStatus=1 where PrescriptionDetailId=" + PrescriptionId + "", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Redirect("paymentSuccess.aspx");
+                // Response.Redirect("paymentSuccess.aspx");
             }
-            else if (testId != null)
+            else if (testId != 0)
             {
                 SqlCommand cmd = new SqlCommand("update LabTest set PaymentStatus=1 where labTestId=" + testId + "", con);
                 con.Open();
