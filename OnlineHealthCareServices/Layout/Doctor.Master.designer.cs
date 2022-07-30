@@ -10,7 +10,7 @@
 namespace OnlineHealthCareServices.Layout {
     
     
-    public partial class UserMaster {
+    public partial class Doctor {
         
         /// <summary>
         /// form1 control.

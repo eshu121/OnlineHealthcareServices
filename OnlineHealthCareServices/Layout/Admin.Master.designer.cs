@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineHealthCareServices.Layout {
+namespace OnlineHealthCareServices {
     
     
-    public partial class UserMaster {
+    public partial class admin {
         
         /// <summary>
         /// form1 control.

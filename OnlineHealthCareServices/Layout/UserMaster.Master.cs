@@ -30,6 +30,13 @@ namespace OnlineHealthCareServices.Layout
                 imgProfile.ImageUrl = "~/UserProfile/" + dt.Rows[0]["ProfileImg"].ToString();
 
             }
+            if (dt.Rows.Count > 0)
+            {
+
+               
+                Image1.ImageUrl = "~/UserProfile/" + dt.Rows[0]["ProfileImg"].ToString();
+
+            }
 
         }
 
