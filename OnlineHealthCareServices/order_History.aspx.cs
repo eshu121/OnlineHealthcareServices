@@ -25,14 +25,17 @@ namespace OnlineHealthCareServices
         string fileName = "../Prescription/";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["UserDetailId"] != null && Session["UserDetailId"].ToString() != "")
-            //{
-            //    UserDetailId = Convert.ToInt32(Session["UserDetailId"]);
-            //}
-            //else
-            //{
-            //    Response.Redirect("userLogin.aspx");
-            //}
+            //code change start
+
+            if (Session["UserDetailId"] != null && Session["UserDetailId"].ToString() != "")
+            {
+                UserDetailId = Convert.ToInt32(Session["UserDetailId"]);
+            }
+            else
+            {
+                Response.Redirect("userLogin.aspx");
+            }
+            //end
             if (IsPostBack)
                 return;
                     
